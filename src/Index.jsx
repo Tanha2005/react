@@ -6,7 +6,7 @@ import About from './pages/about';
 import Product from './pages/Product';
 import Laptop from './pages/Laptop';
 import Phone from './pages/Phone';
-import Camera from './pages/Camera';
+import Camera from './pages/Camera'; 
 
 
 const Index = () => {
