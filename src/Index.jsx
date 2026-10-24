@@ -1,0 +1,34 @@
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Layout from './componet/layout';
+import Home from './pages/home';
+import About from './pages/about';
+import Product from './pages/Product';
+import Laptop from './pages/Laptop';
+import Phone from './pages/Phone';
+import Camera from './pages/Camera';
+
+
+const Index = () => {
+    return (
+        <>
+            <Router>
+                <Routes>
+                    <Route path='/' element={<Layout />} >
+                        <Route index element={<Home />} />
+                        <Route path='about' element={<About />} />
+
+                        <Route path='product' element={<Product />} >
+                        <Route path="phone" element={<Phone/>} />
+                        <Route path="laptop" element={<Laptop />} />
+                        <Route path="camera" element={<Camera />} />
+                    </Route>
+                  </Route>
+
+                </Routes>
+            </Router>
+        </>
+    )
+}
+
+export default Index
